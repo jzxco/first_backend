@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+ {% block content %}
+    <h1>Welcome to my site</h1>
+    <h2>possible routes:</h2>
+     <a href="/papka">test</a>
+     <a href="/login">login</a>
+     <a href="/contact">contact</a>
+     <a href="/404">error 404</a>
+     <a href="/about">about me</a>
+     <a href="/gallery">gallery</a>
+     <a href="/blog">blog</a>
+    <h1>         </h1>
+    <h1>Добро пожаловать в мой сайт</h1>
+    <h2>Возможные маршруты:</h2>
+     <a href="/papka">тест</a>
+     <a href="/login">логин</a>
+     <a href="/contact">контакт</a>
+     <a href="/404">ошибка 404</a>
+     <a href="/about">про меня</a>
+     <a href="/gallery">галлерея</a>
+     <a href="/blog">Блог</a>
+
+
+ {% if user.age > 5 %}
+    Мне больше пяти
+ {% else %}
+    Мне меньше пяти
+{% endif %}
+ {% endblock %}
