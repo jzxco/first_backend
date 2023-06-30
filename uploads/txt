@@ -1,0 +1,37 @@
+from tkinter import *
+from tkinter import messagebox
+
+root=Tk()
+root.title("Список геев")
+
+root.geometry("600x450")
+root.config(bg="white")
+
+lb=Listbox(width=15, height=12, bg="#BC8F8F", selectbackground="#A52A2A",
+           font="Arial 18", fg='#000000')
+lb.pack(side=LEFT, padx=10)
+
+entry=Entry(width=25, font="Arial 18")
+entry.pack(padx=10, pady=5)
+
+task_list=["Абди","Сосуны","Узбек"]
+for item in task_list:
+    lb.insert(END, item)
+
+def newTask():
+    task=entry.get()
+    if task !="":
+        lb.insert(END, task)
+        entry.delete(0, END)
+    else:
+        messagebox.showwarning("Геев не обнаружено")
+        
+def deleteTask():
+    messagebox.showwarning("А все уже")
+
+b1 = Button(text="add",width=20,height=3,font="Arial 18",command=newTask)
+b1.pack()
+b2 = Button(text="del",width=20,height=3,font="Arial 18",command=deleteTask)
+b2.pack()
+
+root.mainloop()
